@@ -1,0 +1,30 @@
+<div class="container">
+  <!-- !header per root -->
+  <header *ngIf="head2" class="header-2">
+      <h1 (click)="showHeader()" routerLink="">Valorant API cards</h1>
+
+      <ul class="scelta-api-2">
+          <li routerLink="/gekko" id="gekko">Gekko</li>
+          <li routerLink="/killjoy" id="killjoy">Killjoy</li>
+          <li routerLink="/viper" id="viper">Viper</li>
+          <li routerLink="/jett" id="jett">Jett</li>
+          <li routerLink="/reyna" id="reyna">Reyna</li>
+      </ul>
+  </header>
+
+  <!-- !default header -->
+  <header *ngIf="head1" class="header">
+      <img src="../assets/img/val-icon.png" class="logo" alt="Valorant logo">
+      <h1>Valorant API cards</h1>
+
+      <ul class="scelta-api">
+          <li (click)="hideHeader()" routerLink="/gekko" id="gekko">Gekko</li>
+          <li (click)="hideHeader()" routerLink="/killjoy" id="killjoy">Killjoy</li>
+          <li (click)="hideHeader()" routerLink="/viper" id="viper">Viper</li>
+          <li (click)="hideHeader()" routerLink="/jett" id="jett">Jett</li>
+          <li (click)="hideHeader()" routerLink="/reyna" id="reyna">Reyna</li>
+      </ul>
+  </header>
+  
+  <router-outlet></router-outlet>
+</div>
