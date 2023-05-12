@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { ControlloHeaderService } from './services/controllo-header.service';
+
+export let browserRefresh = false;
 
 @Component({
     selector: 'app-root',
@@ -6,36 +11,28 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
-    head1 = true;
-    head2 = false;
+export class AppComponent {
+    subscription: Subscription;
+
+    constructor(private router: Router, public controlloHeader: ControlloHeaderService) {
+        this.subscription = router.events.subscribe((event) => {
+            if (event instanceof NavigationStart) {
+              browserRefresh = !router.navigated;
+            }
+        });
+    }
 
     hideHeader(): void {
-        this.head1 = false;
-        this.head2 = true;
+        this.controlloHeader.head1 = false;
+        this.controlloHeader.head2 = true;
     }
 
     showHeader(): void {
-        this.head1 = true;
-        this.head2 = false;
+        this.controlloHeader.head1 = true;
+        this.controlloHeader.head2 = false;
     }
 
-    public get view() {
-        console.log(localStorage.getItem('view'))
-
-        if (!localStorage.getItem('view')) {
-            this.showHeader()
-            localStorage.setItem('view', 'in')
-            console.log(localStorage.getItem('view'))
-        } else {
-            this.hideHeader()
-            console.log(localStorage.getItem('view'))
-        }
-        
-        return "null"
-    }
-
-    ngOnInit(): void {
-        this.view
+    ngOnDestroy() {
+        this.subscription.unsubscribe();
     }
 }
