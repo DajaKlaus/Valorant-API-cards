@@ -1,1 +1,11 @@
 /* ?Colors: E9F4F7(alice blue) 73F5ED(fluorescent cyan) 77D4E4(non photo blue) 435680(yinmn blue) 0B0E22(rich black) */
+
+.select li {
+    color: #73F5ED;
+}
+
+.select li:hover {
+    color: rgb(51, 51, 51);
+    background-color: #73F5ED;
+    box-shadow: 0 0 75px #73F5ED;
+}

@@ -1,1 +1,11 @@
 /* ?Colors: A1BD48(apple green) 00B441(dark pastel green) 5C7F6D(hooker's green) 274B35(brunswick green) 201626(dark purle) */
+
+.select li {
+    color: #00B441;
+}
+
+.select li:hover {
+    color: rgb(51, 51, 51);
+    background-color: #00B441;
+    box-shadow: 0 0 75px #00B441;
+}

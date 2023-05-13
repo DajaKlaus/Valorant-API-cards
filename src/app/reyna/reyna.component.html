@@ -1,1 +1,73 @@
-<p>reyna works!</p>
+<hr>
+<div class="hero">
+    <div class="card">
+        <div class="card-header">
+            <h1>{{ data.data.displayName }}</h1>
+        </div>
+        <div class="card-body">
+            <img src="{{ data.data.fullPortrait }}">
+
+            <div class="description">
+                <h3>Description</h3>
+                <p>{{ data.data.description }}</p>
+            </div>
+
+            <ul class="select">
+                <li (click)="showRole()">Role</li>
+                <li (click)="showSlot1()">Slot 1</li>
+                <li (click)="showSlot2()">Slot 2</li>
+                <li (click)="showSlot3()">Slot 3</li>
+                <li (click)="showSlot4()">Slot 4</li>
+            </ul>
+
+            <div *ngIf="roleS" class="sel">
+                <h3>Role</h3>
+                <p>{{ data.data.role.displayName }}</p>
+                <img src="{{ data.data.role.displayIcon }}" class="iconRole" alt="icon">
+
+                <h4>Role description</h4>
+                <p>{{ data.data.role.description }}</p>
+            </div>
+
+            <div *ngIf="slot1" class="sel">
+                <h3>Slot 1</h3>
+                <p>{{ data.data.abilities[0].displayName }}</p>
+                <img src="{{ data.data.abilities[0].displayIcon }}" class="iconRole" alt="icon">
+
+                <h4>Ability description</h4>
+                <p>{{ data.data.abilities[0].description }}</p>
+            </div>
+
+            <div *ngIf="slot2" class="sel">
+                <h3>Slot 2</h3>
+                <p>{{ data.data.abilities[1].displayName }}</p>
+                <img src="{{ data.data.abilities[1].displayIcon }}" class="iconRole" alt="icon">
+
+                <h4>Ability description</h4>
+                <p>{{ data.data.abilities[1].description }}</p>
+            </div>
+
+            <div *ngIf="slot3" class="sel">
+                <h3>Slot 3</h3>
+                <p>{{ data.data.abilities[2].displayName }}</p>
+                <img src="{{ data.data.abilities[2].displayIcon }}" class="iconRole" alt="icon">
+
+                <h4>Grenade description</h4>
+                <p>{{ data.data.abilities[2].description }}</p>
+            </div>
+
+            <div *ngIf="slot4" class="sel">
+                <h3>Slot 4</h3>
+                <p>{{ data.data.abilities[3].displayName }}</p>
+                <img src="{{ data.data.abilities[3].displayIcon }}" class="iconRole" alt="icon">
+
+                <h4>Ultimate description</h4>
+                <p>{{ data.data.abilities[3].description }}</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <p>Developed by: {{ data.data.developerName }}</p>
+        </div>
+    </div>
+</div>
+

@@ -125,16 +125,12 @@ h2 {
     width: 14%;
     margin: 30px 3%;
     padding: 5px 15px;
-    color: #43C0FF;
     font-size: 17px;
     text-align: center;
     transition: 0.3s ease;
 }
 
 .select li:hover {
-    background-color: #43C0FF;
-    box-shadow: 0 0 75px #43C0FF;
-    color: rgb(51, 51, 51);
     border: 0;
     letter-spacing: 3px;
 }

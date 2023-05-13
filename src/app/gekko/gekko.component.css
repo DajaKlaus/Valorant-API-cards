@@ -1,2 +1,11 @@
 /* ?Colors: C400FF(electric purple) FFE100(school bus yellow) 43C0FF(deep sky blue) 5658FF(risd blue) 40F100(neon green) */
 
+.select li {
+    color: #43C0FF;
+}
+
+.select li:hover {
+    color: rgb(51, 51, 51);
+    background-color: #43C0FF;
+    box-shadow: 0 0 75px #43C0FF;
+}
