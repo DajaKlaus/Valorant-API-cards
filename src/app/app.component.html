@@ -9,6 +9,12 @@
             <li routerLink="/viper" id="viper">Viper</li>
             <li routerLink="/jett" id="jett">Jett</li>
             <li routerLink="/reyna" id="reyna">Reyna</li>
+            <br>
+            <li [routerLink]="['/generic', 'gekko']">Gekko</li>
+            <li [routerLink]="['/generic', 'killjoy']">Killjoy</li>
+            <li [routerLink]="['/generic', 'viper']">Viper</li>
+            <li [routerLink]="['/generic', 'jett']">Jett</li>
+            <li [routerLink]="['/generic', 'reyna']">Reyna</li>
         </ul>
     </header>
 
@@ -23,6 +29,14 @@
             <li (click)="hideHeader()" routerLink="/viper" id="viper">Viper</li>
             <li (click)="hideHeader()" routerLink="/jett" id="jett">Jett</li>
             <li (click)="hideHeader()" routerLink="/reyna" id="reyna">Reyna</li>
+        </ul>
+
+        <ul class="scelta-api-generic">
+            <li (click)="hideHeader()" [routerLink]="['/generic', 'gekko']">Gekko</li>
+            <li (click)="hideHeader()" [routerLink]="['/generic', 'killjoy']">Killjoy</li>
+            <li (click)="hideHeader()" [routerLink]="['/generic', 'viper']">Viper</li>
+            <li (click)="hideHeader()" [routerLink]="['/generic', 'jett']">Jett</li>
+            <li (click)="hideHeader()" [routerLink]="['/generic', 'reyna']">Reyna</li>
         </ul>
     </header>
     

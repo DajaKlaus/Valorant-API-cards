@@ -9,6 +9,7 @@ import { JettComponent } from './jett/jett.component';
 import { KilljoyComponent } from './killjoy/killjoy.component';
 import { ReynaComponent } from './reyna/reyna.component';
 import { ViperComponent } from './viper/viper.component';
+import { GenericComponent } from './generic/generic.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ViperComponent } from './viper/viper.component';
     JettComponent,
     KilljoyComponent,
     ReynaComponent,
-    ViperComponent
+    ViperComponent,
+    GenericComponent
   ],
   imports: [
     BrowserModule,

@@ -58,16 +58,19 @@ h2 {
 }
 
 .scelta-api,
-.scelta-api-2 {
+.scelta-api-2,
+.scelta-api-generic {
     list-style: none;
     margin: auto;
 }
 
-.scelta-api {
+.scelta-api,
+.scelta-api-generic {
     width: 100%;
 }
 
-.scelta-api li {
+.scelta-api li,
+.scelta-api-generic li {
     display: inline-block;
     border-radius: 10px;
     text-align: center;
@@ -107,12 +110,17 @@ h2 {
     color: #983586;
 }
 
+.scelta-api li:hover,
+.scelta-api-2 li:hover,
+.scelta-api-generic li:hover {
+    letter-spacing: 3px;
+}
+
 #gekko:hover {
     background-color: #43C0FF;
     box-shadow: 0 0 75px #43C0FF;
     color: rgb(51, 51, 51);
     border: 0;
-    letter-spacing: 3px;
 }
 
 #killjoy:hover {
@@ -120,7 +128,6 @@ h2 {
     box-shadow: 0 0 75px #FFFD82;
     color: rgb(51, 51, 51);
     border: 0;
-    letter-spacing: 3px;
 }
 
 #viper:hover {
@@ -128,7 +135,6 @@ h2 {
     box-shadow: 0 0 75px #00B441;
     color: rgb(51, 51, 51);
     border: 0;
-    letter-spacing: 3px;
 }
 
 #jett:hover {
@@ -136,7 +142,6 @@ h2 {
     box-shadow: 0 0 75px #77D4E4;
     color: rgb(51, 51, 51);
     border: 0;
-    letter-spacing: 3px;
 }
 
 #reyna:hover {
@@ -144,7 +149,6 @@ h2 {
     box-shadow: 0 0 75px #983586;
     color: rgb(51, 51, 51);
     border: 0;
-    letter-spacing: 3px;
 }
 
 /* ------------------------------------- */
